@@ -1,0 +1,19 @@
+# 第三方代码说明
+
+`CameraWebServer/app_httpd.cpp`、`CameraWebServer/camera_index.h`、`CameraWebServer/camera_pins.h`
+来自 Espressif Systems 的 ESP32-CAM 示例（esp32-camera / arduino-esp32 示例工程）：
+
+```
+Copyright 2015-2016 Espressif Systems (Shanghai) PTE LTD
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use these files except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+```
+
+`CameraWebServer/partitions.csv` 为同一示例工程的默认分区表。
+
+本仓库对其中的 `CameraWebServer.ino` 做了修改（Wi-Fi 配置外置、可选静态 IP、断线重连与状态灯逻辑）；
+修改后的许可证仍以 Apache License 2.0 为准，其余原创部分为 MIT。
