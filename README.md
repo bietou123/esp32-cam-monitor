@@ -1,5 +1,20 @@
 # ESP32-CAM 家庭监控
 
+<!-- project-guide:start -->
+## 图文原理导览
+
+AI-Thinker ESP32-CAM 固件、Python 局域网代理与浏览器界面组成的监控方案；代理合并控制和图像流端口，可加 Basic Auth，再按需接入 HTTPS 隧道。
+
+![ESP32-CAM 家庭监控链路工作原理图](docs/images/principle.png)
+
+**主链路：** 摄像头采集 -> 控制与 MJPEG -> 局域网代理 -> 浏览器查看。
+
+**数据与边界：** 视频由设备实时产生；源码不包含家庭图像、Wi-Fi 或访问密码。 摄像头与代理同局域网；公网必须另有受保护的 HTTPS 通道。
+
+[完整图文说明、源码入口与运行步骤](docs/PROJECT_GUIDE.md)
+
+<!-- project-guide:end -->
+
 把一块 AI-Thinker ESP32-CAM 变成一个可在外网查看的家用摄像头：摄像头固件 + 局域网反向代理 + 手机友好的 Web 界面，配套可选的状态灯与自动重连。
 
 ## 架构
